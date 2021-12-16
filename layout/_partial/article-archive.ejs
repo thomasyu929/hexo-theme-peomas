@@ -1,0 +1,18 @@
+<div class="blog-post">
+
+    <!-- Title -->
+    <h2 class="blog-post-title-archive">
+        <a href="<%- config.root %><%- item.path %>">
+            <%- item.title || item.link%>
+        </a>
+    </h2>
+
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        <%= item.date.format(config.date_format) %>
+        <% if(item.author) { %>
+            by <%- item.author %>
+        <% } %>
+    </p>
+
+</div>

@@ -1,0 +1,19 @@
+<%
+var title = '';
+if (page.category) title = page.category;
+if (page.tag) title = page.tag;
+if (page.archive){
+    if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+    else title = "Archives";
+}
+%>
+
+<% if(title) { %>
+   <h2 class="blog-archive-title"><%- title %></h2>
+<% } %>
+
+<% page.posts.each(function(item){ %>
+<%- partial('_partial/article-archive', {item: item}) %>
+<% }); %>
+
+<%- partial('_partial/pagination') %>

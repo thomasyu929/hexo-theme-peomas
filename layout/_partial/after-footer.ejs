@@ -1,0 +1,21 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<%- js('bootstrap/js/bootstrap.min.js') %>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<%- js('js/ie10-viewport-bug-workaround.js') %>
+
+<!-- Disqus Comments -->
+<% if (theme.disqus_shortname){ %>
+    <script type="text/javascript">
+        var disqus_shortname = '<%= theme.disqus_shortname %>';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+<% } %>
