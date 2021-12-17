@@ -1,13 +1,38 @@
-.nav-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+.navbar {
 
-  .mark-wrapper {
-    font-family: font-family: 'Bakbak One', cursive;
-  }
+  .navbar-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 
-  .navbar-wrapper {
-    
+    .mark-wrapper {
+      font-family: 'Fuzzy Bubbles', cursive;
+      font-size: 1.6rem;
+
+      .logo {
+        width: 50px;
+      }
+    }
+
+    .menu-wrapper {
+      ul {
+        display: flex;
+        list-style: none;
+
+        li {
+          padding: 0 0.5rem;
+
+          a {
+            color: #3f3f3f;
+            font-weight: 500;
+            padding: 0 10px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }
+
