@@ -5,32 +5,11 @@
 <%- partial('_partial/head') %>
 
 <body>
-    <!-- Menu -->
-    <%- partial('_partial/menu') %>
+    <%- partial('_partial/nav') %>
 
-    <div class="container">
-        <!-- Blog Header: title and subtitle -->
-        <%- partial('_partial/header') %>
-
-        <div class="row">
-
-            <!-- Main Content -->
-            <div class="col-sm-8 blog-main">
-                <%- body %>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-                <%- partial('_partial/sidebar') %>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <%- partial('_partial/footer') %>
-
+    <% body %>
     <!-- After footer scripts -->
-    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/scripts') %>
 </body>
 
 </html>

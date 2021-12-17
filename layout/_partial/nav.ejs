@@ -1,0 +1,17 @@
+<div class="nav-container">
+  <div class="mark-wrapper">
+    <% if (config.logo_mark) { %>
+       <img class="logo" src="<%- config.logo_mark %> "/>
+    <% } %> 
+    <div class="mark"><%- config.mark %></div>
+  </div>
+  <div class="navbar-wrapper">
+    <ul>
+      <% for (let section in config.menu) { %>
+        <li>
+          <a href="<%- config.menu[section] %>"><% section %> </a>
+        </li>
+      <% } %> 
+    </ul>
+  </div>
+</div>
