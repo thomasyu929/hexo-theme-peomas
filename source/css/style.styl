@@ -3,7 +3,29 @@
 
 @import '_mixin/normalize.css';
 @import '_partial/nav';
+@import '_widget/scroll-top';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
+  height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  }
+
+main {
+  height: 3000px;
+}
+
+button {
+  &:focus {
+    box-shadow: none !important;
+  }
 }

@@ -1,7 +1,4 @@
-# Header
-# menu:
-#   Home: /
-#   Archives: /archives
-#   Category: /category
-#   About: /about
+favicon: /img/favicon.png
 
+scroll_top_btn:
+  enable: true

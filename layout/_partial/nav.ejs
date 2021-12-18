@@ -1,19 +1,24 @@
-<div class="navbar fixed-top">
-  <div class="navbar-container">
+<nav id="navbar" class="fixed-nav">
+  <div class="container">
     <div class="mark-wrapper">
       <% if (config.logo_mark) { %>
-         <img class="logo" src="<%- config.logo_mark %> "/>
+          <img class="logo" src="<%- config.logo_mark %> "/>
       <% } %> 
-      <div class="mark"><%- config.mark %></div>
+      <div class="title-mark"><%- config.mark %></div>
     </div>
-    <div class="menu-wrapper">
+  
+    <button id="menu-btn" class="btn menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
+      <div class="menu-icon"><span></span><span></span><span></span></div>
+    </button>
+  
+    <div id="nav-menu" class="collapse menu-wrapper">
       <ul>
         <% for (let section in config.menu) { %>
           <li>
             <a href="<%- config.menu[section] %>"><%- section %> </a>
           </li>
-        <% } %> 
+        <% } %>
       </ul>
     </div>
   </div>
-</div>
+</nav>
