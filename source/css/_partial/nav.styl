@@ -1,7 +1,7 @@
 header {
   display: block;
   position: relative;
-  min-height: 80px;
+  min-height: 70px;
 }
 
 nav {
@@ -9,8 +9,11 @@ nav {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 15px 0;
   transition: background-color 0.5s ease-in-out, padding 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out, padding 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  will-change: background, padding;
+  padding: 15px 0;
+  line-height: 40px;
 
   &.fixed-nav {
     position: fixed;
@@ -56,6 +59,7 @@ nav {
         align-items: center;
         list-style: none;
         margin-bottom: 0;
+        padding-left: 0;
 
         li {
           padding: 0.5rem;

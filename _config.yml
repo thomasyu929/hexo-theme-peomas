@@ -1,4 +1,17 @@
 favicon: /img/favicon.png
 
+mark: Peomas
+logo_mark: null
+
 scroll_top_btn:
   enable: true
+
+nprogress: 
+  enable: true
+  color: "#131313"
+
+menu:
+  Home: /
+  Archives: /archives
+  Category: /category
+  About: /about

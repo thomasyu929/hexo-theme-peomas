@@ -2,7 +2,6 @@ listenScrollToSetHeader();
 listenToSetScrollTopBtn();
 listenToSetButtonClick();
 
-
 function listenScrollToSetHeader() {
   const navbar = $('#navbar');
   $(window).scroll(() => {
@@ -66,13 +65,11 @@ function listenToSetButtonClick() {
 
   const collpseMenu = document.getElementById('nav-menu');
   collpseMenu.addEventListener('show.bs.collapse', () => {
-    console.log($('nav').not('.nav-scrolled'))
     $('nav').not('.nav-scrolled').css({
       'box-shadow': '0 2px 6px rgba(0, 0, 0, 0.5)'
     })
   })
   collpseMenu.addEventListener('hide.bs.collapse', () => {
-    console.log($('nav').not('.nav-scrolled'))
     $('nav').not('.nav-scrolled').css({
       'box-shadow': 'none'
     })

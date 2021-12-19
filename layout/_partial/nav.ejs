@@ -1,10 +1,10 @@
-<nav id="navbar" class="fixed-nav">
+<nav id="navbar" class="navbar fixed-nav scrolling-navbar">
   <div class="container">
     <div class="mark-wrapper">
-      <% if (config.logo_mark) { %>
-          <img class="logo" src="<%- config.logo_mark %> "/>
+      <% if (theme.logo_mark) { %>
+          <img class="logo" src="<%- theme.logo_mark %> "/>
       <% } %> 
-      <div class="title-mark"><%- config.mark %></div>
+      <div class="title-mark"><%- theme.mark %></div>
     </div>
   
     <button id="menu-btn" class="btn menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
@@ -13,9 +13,9 @@
   
     <div id="nav-menu" class="collapse menu-wrapper">
       <ul>
-        <% for (let section in config.menu) { %>
+        <% for (let section in theme.menu) { %>
           <li>
-            <a href="<%- config.menu[section] %>"><%- section %> </a>
+            <a href="<%- theme.menu[section] %>"><%- section %> </a>
           </li>
         <% } %>
       </ul>
