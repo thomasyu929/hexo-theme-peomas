@@ -13,9 +13,9 @@
   
     <div id="nav-menu" class="collapse menu-wrapper">
       <ul>
-        <% for (let section in theme.menu) { %>
+        <% for (let i in theme.menu) { %>
           <li>
-            <a href="<%- theme.menu[section] %>"><%- section %> </a>
+            <a href="<%- url_for(theme.menu[i]) %>"><%= i %> </a>
           </li>
         <% } %>
       </ul>
