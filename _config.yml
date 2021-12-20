@@ -15,3 +15,21 @@ menu:
   Archives: /archives
   Category: /category
   About: /about
+
+
+# About
+about:
+  avatar: 
+    enable: true
+    link: /img/avatar.png
+  title: Thomas Yu
+  subTitle: Front-End Developer - Labcorp
+  icon:
+  - { class: "fab fa-github", url: "https://github.com/thomasyu929", info: "Thomas Yu's Github" }
+  - { class: "fas fa-envelope", url: "mailto:yby4301955@gmail.com", info: "Mail to me" }
+  - { class: "fab fa-linkedin", url: "https://linkedin.com", info: "LinkedIn" }
+  - { class: "fas fa-rss", url: "/atom.xml", info: "Subscribe Thomas's blog"}
+
+
+
+

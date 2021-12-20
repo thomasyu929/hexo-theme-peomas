@@ -1,4 +1,26 @@
 <% page.layout === 'about' %> 
 <div class="about-wrapper">
-  <%- page.content %> 
+  <div class="row">
+    <% if (theme.about.avatar.enable) { %> 
+      <div class="col avatar">
+        <img src="<%= url_for(theme.about.avatar.link) %>" />
+      </div>
+    <% } %>
+    <div class="col title-wrapper">
+      <div class="title"><%- theme.about.title %></div>
+      <div class="sub-title"><%- theme.about.subTitle %></div>
+    </div>
+    <div class="col">
+      <% for (let i in theme.about.icon) { %>
+        <a class="about-icon" href="<%= url_for(theme.about.icon) %>" title="<%- theme.about.icon[i].info %>">
+          <i class="<%- theme.about.icon[i].class %>"></i>
+        </a>
+      <% } %> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <%- page.content %> 
+    </div>
+  </div>
 </div>
