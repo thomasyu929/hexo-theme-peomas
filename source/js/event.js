@@ -39,7 +39,7 @@ function listenToSetScrollTopBtn() {
 
     scrollBtn.css({
       'right': right + 'px',
-      'bottom': right < 0 ? '-50px' : '20px'
+      'bottom': right < 0 ? '-50px' : '120px'
     })
   }
 

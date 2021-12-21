@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@300;400;500;700');
 
 @import '_mixin/normalize.css';
+@import '_colors';
 @import '_partial/*';
 @import '_widget/*';
 @import 'about';
@@ -12,12 +13,23 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+main {
+  height: 100vh;
+  position: relative;
 }
 
 button {
   &:focus {
     box-shadow: none !important;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 // overwrite the n-progress

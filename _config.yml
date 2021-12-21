@@ -31,5 +31,5 @@ about:
   - { class: "fas fa-rss", url: "/atom.xml", info: "Subscribe Thomas's blog"}
 
 
-
-
+# Footer
+footer:
