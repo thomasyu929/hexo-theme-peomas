@@ -17,6 +17,11 @@ menu:
   About: /about
 
 
+# Index
+index:
+  enable_sticky: true
+
+
 # About
 about:
   avatar: 

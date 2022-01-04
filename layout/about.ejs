@@ -12,7 +12,7 @@
     </div>
     <div class="col">
       <% for (let i in theme.about.icon) { %>
-        <a class="about-icon" href="<%= url_for(theme.about.icon) %>" title="<%- theme.about.icon[i].info %>">
+        <a class="about-icon" href="<%= url_for(theme.about.icon[i].url) %>" title="<%- theme.about.icon[i].info %>">
           <i class="<%- theme.about.icon[i].class %>"></i>
         </a>
       <% } %> 
