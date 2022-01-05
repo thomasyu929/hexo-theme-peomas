@@ -1,0 +1,20 @@
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > div {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 0.5rem;
+
+    & > span,a {
+      padding: 1rem;
+      color: $footer-text-color;
+
+      &.current {
+        color: $text-color; 
+      }
+    }
+  }
+}

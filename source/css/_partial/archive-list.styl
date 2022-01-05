@@ -1,0 +1,23 @@
+.list-group {
+  h3:not(first-child) {
+    margin-top: 1rem;
+    color: $header-text-color;
+  }
+
+  .list-group-item {
+    border: none;
+    
+    a {
+      color: $text-color;
+
+      &:hover {
+        color: #0d6efd;
+      }
+    }
+
+    .post-date {
+      float: right;
+      color: $footer-text-color;
+    }
+  }
+}

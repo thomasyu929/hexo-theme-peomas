@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles');
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Poppins:wght@300;400;500;700');
 
+@import '_mixin/github_markdown.css';
+@import '_mixin/prism.css';
 @import '_mixin/normalize.css';
 @import '_colors';
 @import '_partial/*';
 @import '_widget/*';
-@import 'about';
-@import 'index';
+@import '_pages/*';
 
 * {
   box-sizing: border-box;
@@ -19,12 +20,11 @@ body {
 }
 
 main {
-  height: 100vh;
   position: relative;
 }
 
 #main {
-  padding-bottom: 100px;
+  min-height: calc(100vh - 172px);
 }
 
 button {
@@ -39,7 +39,7 @@ a {
 
 // overwrite the n-progress
 #nprogress {
-  .bar {
+.bar {
     background: unquote(hexo-config('nprogress.color')) !important;
   }
 }
@@ -47,4 +47,14 @@ a {
 .row {
   margin-left: 0;
   margin-right: 0;
+}
+
+// overwrite the markdown
+code {
+  color: inherit;
+  font-size: 0.85rem !important;
+}
+
+pre {
+  border: none !important;
 }

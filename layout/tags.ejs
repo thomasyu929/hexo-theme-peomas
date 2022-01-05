@@ -1,0 +1,22 @@
+<% 
+  page.layout === 'tags'
+  page.title = 'Tag'
+
+  let min_font = theme.tagcloud.min_font || 15
+  let max_font = theme.tagcloud.max_font || 30
+  let unit = theme.tagcloud.unit || 'px'
+  let start_color = theme.tagcloud.start_color || '#BBBBEE'
+  let end_color = theme.tagcloud.end_color || '#337ab7'
+%>
+
+<div class="tagcloud-wrapper">
+  <%- tagcloud({
+    min_font: min_font,
+    max_font: max_font,
+    amount: 999,
+    unit: unit,
+    color: true,
+    start_color,
+    end_color
+  }) %>
+</div>

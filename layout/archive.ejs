@@ -1,1 +1,7 @@
-<div class="test">Archives</div>
+<% 
+  page.layout === 'archive'
+  page.title = 'Archive'
+%>
+
+<%- partial('_partial/archive-list') %>
+<%- partial('_partial/pagination') %> 

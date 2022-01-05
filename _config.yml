@@ -13,13 +13,26 @@ nprogress:
 menu:
   Home: /
   Archives: /archives
-  Category: /category
+  Category: /categories
+  Tag: /tags
   About: /about
 
 
 # Index
 index:
   enable_sticky: true
+  post_url_target: _self
+  enable_category: true
+  enable_tag: true
+
+
+# Tag
+tagcloud:
+  min_font: 15
+  max_font: 30
+  unit: px
+  start_color: "#337ab7"
+  end_color: "#0d6efd"
 
 
 # About

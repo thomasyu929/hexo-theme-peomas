@@ -1,0 +1,28 @@
+<article class="post-wrapper markdown-body">
+  <h2 class="post-title">
+    <%- item.title %>
+  </h2>
+  <p class="post-meta">
+    <%= item.date.format(config.date_format) %>
+    <% if(item.author) { %>
+        by <%- item.author %>
+    <% } %>
+    <% if(item.categories) { %>
+      <% item.categories.each(function(category) { %>
+        <a class="tag" href="<%= url_for(category.path) %>"><%= category.name %></a> 
+      <% }) %> 
+    <% } %>
+    <% if(item.tags) { %>
+      <% item.tags.each(function(tag) { %>
+        <a class="tag" href="<%= url_for(tag.path) %>"><%= tag.name %></a> 
+      <% }) %> 
+    <% } %>
+  </p>
+
+  <!-- Content -->
+  <%- item.content %>
+
+  <!-- Tags and Categories links -->
+
+
+</article>

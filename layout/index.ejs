@@ -4,14 +4,16 @@
     <article class="row index-post-wrapper">
       <% if (post.img_src) { %> 
         <div class="col-12 col-md-4 mx-auto post-image">
-          <img src="<%= url_for(post.img_src) %>" />
+          <a href="<%= url_for(post.path) %>" target="<%- theme.index.post_url_target %>">
+            <img src="<%= url_for(post.img_src) %>" />
+          </a>
         </div>
       <% } %>
       <div class="col-12 col-md-<%= post.img_src ? '8' : '12' %> mx-auto post-intro">
         <div class="post-header <%= post.sticky > 0 ? 'justify-content-between' : null %>">
-          <h1>
-            <%= post.title %>
-          </h1>
+          <a href="<%= url_for(post.path) %>" target="<%- theme.index.post_url_target %>">
+            <h1><%= post.title %></h1>
+          </a>
           <% if (theme.index.enable_sticky && post.sticky > 0) { %>
             <i class="fas fa-thumbtack"></i>
           <% } %>
@@ -25,8 +27,26 @@
             No content of this post.
           <% } %>
         </div>
-        <div class="date"><%= date(post.date, 'MM/DD/YYYY') %></div>
+        <div class="post-footer">
+          <time datetime="<%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
+            <%= date(post.date, config.date_format) %>
+          </time>
+          <div>
+            <% if(theme.index.enable_category && post.categories.length > 0) { %>
+              <% post.categories.forEach((category) => { %> 
+                <a class="tag" href="<%= url_for(category.path) %>"><%- trim(category.name) %></a>
+              <% }) %> 
+            <% } %> 
+            <% if(theme.index.enable_tag && post.tags.length > 0) { %>
+              <% post.tags.forEach((tag) => { %> 
+                <a class="tag" href="<%= url_for(tag.path) %>"><%- trim(tag.name) %></a>
+              <% }) %> 
+            <% } %>
+          </div>
+        </div>
       </div>
     </article>
   <% }) %> 
 </div>
+
+<%- partial('_partial/pagination') %>

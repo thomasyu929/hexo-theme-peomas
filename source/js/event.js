@@ -75,3 +75,7 @@ function listenToSetButtonClick() {
     })
   })
 }
+
+function generateCategory(posts) {
+  console.log('1');
+}

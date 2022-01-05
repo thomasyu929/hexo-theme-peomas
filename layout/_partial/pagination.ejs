@@ -1,0 +1,13 @@
+<% if (page.total > 1){ %>
+  <div class="py-5 pagination-wrapper" aria-label="pagination">
+    <div>
+      <%- paginator({
+        prev_text: '<i class="fa fa-angle-left"></i>',
+        next_text: '<i class="fa fa-angle-right"></i>',
+        mid_size: 2,
+        end_size: 1,
+        escape: false
+      }) %>
+    </div>
+  </div>
+<% } %>

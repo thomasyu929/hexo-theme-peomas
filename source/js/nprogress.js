@@ -17,7 +17,6 @@ function listenToSetNProgress() {
 
 function loadPageProgress(callback) {
   NProgress.start()
-  NProgress.set(0.3)
 
   $(window).on('load', () => {
     // TODO Lazy loading

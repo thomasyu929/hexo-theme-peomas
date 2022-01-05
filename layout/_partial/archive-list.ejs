@@ -1,0 +1,17 @@
+<ul class="list-group">
+<% let currDate; %> 
+<% page.posts.each(function(post) { %>
+  <% if (currDate !== date(post.date, 'YYYY')) { %>
+    <% currDate = date(post.date, 'YYYY') %> 
+    <h3><%= currDate %></h3>
+  <% } %>
+  <li class="list-group-item">
+    <div class="d-inline">
+      <a href="<%= url_for(post.path) %>" target="<%- theme.index.post_url_target %>">
+        <%= post.title %>
+      </a>
+    </div>
+    <div class="post-date"><%= date(post.date, 'MM/DD') %>  
+  </li>
+<% })%> 
+</ul>
