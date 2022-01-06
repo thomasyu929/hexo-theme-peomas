@@ -27,6 +27,12 @@ main {
   min-height: calc(100vh - 172px);
 }
 
+@media(max-width: 767px) {
+  #main > .py-5 {
+    padding-top: 0 !important;
+  }
+}
+
 button {
   &:focus {
     box-shadow: none !important;
@@ -34,7 +40,13 @@ button {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+.tag {
+  &:hover {
+    color: $blue !important;
+  }
 }
 
 // overwrite the n-progress

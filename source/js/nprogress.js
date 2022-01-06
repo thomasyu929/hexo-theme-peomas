@@ -6,23 +6,10 @@ function listenToSetNProgress() {
     minimum: 0,
   });
 
-  loadPageProgress(() => $(window).scroll(() => {
+  $(window).scroll(() => {
     const percent = getScrollPercentage();
 
     NProgress.set(percent);
-  }));
-
-  
-}
-
-function loadPageProgress(callback) {
-  NProgress.start()
-
-  $(window).on('load', () => {
-    // TODO Lazy loading
-    NProgress.set(100);
-
-    Promise.resolve().then(() => callback());
   });
 }
 

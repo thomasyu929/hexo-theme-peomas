@@ -1,0 +1,7 @@
+<%
+  page.layout = "category"
+
+  var category = site.categories.find({name: page.category}).filter(category => category.length).data[0]
+%>
+
+<%- partial('_partial/archive-list.ejs', { params: { postTotal: category ? category.posts.length : 0 } }) %>

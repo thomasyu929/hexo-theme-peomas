@@ -1,0 +1,47 @@
+.input-wrapper {
+  margin: 1rem 0;
+  position: relative;
+
+  i {
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    color: $footer-text-color;
+  }
+
+  .search-input {
+    outline: none;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $footer-text-color;  
+    padding: 5px 15px 5px 30px;
+  }
+}
+
+.result-wrapper {
+
+  a {
+    & h3:hover {
+      color: $blue; 
+    }
+  }
+
+  .content {
+    color: $footer-text-color;  
+  }
+
+  .tag {
+    color: $footer-text-color;
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-right: 2px;
+    border-left: 3px solid #0d6efd;
+    padding: 0 5px;
+    line-height: 100%;
+  }
+  
+  .keyword {
+    color: $blue;
+    font-weight: 500;
+  }
+}

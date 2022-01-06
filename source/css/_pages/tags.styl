@@ -1,8 +1,14 @@
-.tagcloud-wrapper {
+.tags-wrapper {
+  padding-top: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(50vh + 72px);
+  flex-direction: column;
+  
+  .tagcloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
   a {
     padding: 10px;

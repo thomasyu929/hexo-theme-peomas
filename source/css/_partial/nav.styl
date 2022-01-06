@@ -66,7 +66,6 @@ nav {
 
           a {
             color: $header-text-color;
-            padding: 0 10px;
             text-decoration: none;
             transition: letter-spacing 0.2s ease-in, font-weight 0.2s ease-in;
 
@@ -74,6 +73,22 @@ nav {
               letter-spacing: 1px;
               font-weight: 500;
             }
+          }
+
+          &.search-icon i {
+            color: $header-text-color;
+            cursor: pointer;
+            transition: font-size 0.2s ease-in;
+
+            &:hover {
+              font-size: 1.1rem;
+              color: $blue;
+            }
+          }
+          
+
+          &:last-child {
+            padding-right: 0;
           }
         }
       }
@@ -83,7 +98,7 @@ nav {
       flex-wrap: nowrap;
 
       .menu-btn {
-        display: none;  
+        display: none;
       }
 
       .menu-wrapper {
@@ -92,6 +107,12 @@ nav {
 
         ul {
           flex-direction: row;
+          
+          li {
+            & > a,i {
+              margin-left: 10px;
+            }
+          }
         }
       }
     }
@@ -99,6 +120,10 @@ nav {
 }
 
 // menu icon
+.menu-btn {
+  padding: 0;
+}
+
 .menu-icon {
   width: 27px;
   height: 20px;

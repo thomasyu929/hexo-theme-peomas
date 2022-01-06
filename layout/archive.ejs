@@ -3,5 +3,5 @@
   page.title = 'Archive'
 %>
 
-<%- partial('_partial/archive-list') %>
+<%- partial('_partial/archive-list', { params: { postTotal: site.posts.length } }) %>
 <%- partial('_partial/pagination') %> 
