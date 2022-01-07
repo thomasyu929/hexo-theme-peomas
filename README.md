@@ -1,5 +1,10 @@
 # Peomas
+
+![Required Node version](https://img.shields.io/node/v/hexo) [![npm version](https://badge.fury.io/js/hexo.svg)](https://badge.fury.io/js/hexo) [![hexo version](https://img.shields.io/badge/Hexo-%3E%3D%205.0-blue)](https://github.com/hexojs/hexo) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A concise Hexo theme that can be used for Github Pages personal blog.
+
+See [Demo](https://thomasyu929.github.io/)
 
 ## Features
 
