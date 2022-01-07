@@ -48,6 +48,9 @@ about:
   - { class: "fab fa-linkedin", url: "https://linkedin.com", info: "LinkedIn" }
   - { class: "fas fa-rss", url: "/atom.xml", info: "Subscribe Thomas's blog"}
 
+# Post
+toc:
+  enable: true
 
 # Footer
-footer:
+footer: ''
