@@ -2,10 +2,10 @@
   <h2 class="post-title">
     <%- item.title %>
   </h2>
-  <p class="post-meta">
-    <%= item.date.format(config.date_format) %>
+  <div class="post-meta">
+    <time datetime="<%= full_date(date) %> "><%= date(item.date, config.date_format) %></time>
     <% if(item.author) { %>
-        by <%- item.author %>
+        by <span class="author"><%- item.author %></span>
     <% } %>
     <% if(item.categories) { %>
       <% item.categories.each(function(category) { %>
@@ -17,7 +17,10 @@
         <a class="tag" href="<%= url_for(tag.path) %>"><%= tag.name %></a> 
       <% }) %> 
     <% } %>
-  </p>
+    <% if(item.source_url) { %>
+      <div class="source">Source: <a href="<%= url_for(item.source_url) %>"><%= item.source_url %></a></div>
+    <% } %>
+  </div>
   
   <div id="content">
     <%- item.content %>
