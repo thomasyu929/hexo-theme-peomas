@@ -1,15 +1,19 @@
 favicon: /img/favicon.png
 
+# Logo Mark
 mark: Peomas
 logo_mark: null
 
+# Scroll button
 scroll_top_btn:
   enable: true
 
+# NProgress
 nprogress: 
   enable: true
   color: "#131313"
 
+# Navigation menu
 menu:
   Home: /
   Archives: /archives
@@ -17,16 +21,14 @@ menu:
   Tag: /tags
   About: /about
 
-
-# Index
+# Index Page config
 index:
   enable_sticky: true
   post_url_target: _self
   enable_category: true
   enable_tag: true
 
-
-# Tag
+# Tag Page config
 tagcloud:
   min_font: 15
   max_font: 30
@@ -34,8 +36,7 @@ tagcloud:
   start_color: "#337ab7"
   end_color: "#0d6efd"
 
-
-# About
+# About Page config
 about:
   avatar: 
     enable: true
@@ -48,9 +49,6 @@ about:
   - { class: "fab fa-linkedin", url: "https://linkedin.com", info: "LinkedIn" }
   - { class: "fas fa-rss", url: "/atom.xml", info: "Subscribe Thomas's blog"}
 
-# Post
+# Post Page config
 toc:
   enable: true
-
-# Footer
-footer: ''

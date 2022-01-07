@@ -1,4 +1,8 @@
-<% page.layout === 'about' %> 
+<%
+  page.layout === 'about'
+  page.title = 'About'
+%>
+
 <div class="about-wrapper">
   <div class="row">
     <% if (theme.about.avatar.enable) { %> 
