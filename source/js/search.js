@@ -8,6 +8,11 @@ function listenSearchInput(url, searchId, resultId) {
     searchEl.focus();
   })
 
+  $('#searchModal').on('hidden.bs.modal', function () {
+    searchEl.val('');
+    resultEl.html('');
+  })
+
   $.ajax({
     url,
     dataType: "xml",
@@ -56,8 +61,8 @@ function listenSearchInput(url, searchId, resultId) {
             const m_content = matchContent.replace(reg, `<span class="keyword">${ keyword }</span>`)
 
             if (isMatch) {
-              tagHTML = post.tags.reduce((html, tag) => html + `<div class="tag">${ tag }</div>`, '');
-              categoryHTML = post.categories.reduce((html, category) => html + `<div class="tag">${ category }</div>`, '');
+              tagHTML = post.tags.reduce((html, tag) => html + `<div class="search-tag">${ tag }</div>`, '');
+              categoryHTML = post.categories.reduce((html, category) => html + `<div class="search-tag">${ category }</div>`, '');
 
               resultHTML += `
                 <li class="list-group-item py-2">
