@@ -11,7 +11,7 @@
       <div class="col-12 col-md-<%= post.img_src ? '8' : '12' %> mx-auto post-intro">
         <div class="post-header <%= post.sticky > 0 ? 'justify-content-between' : null %>">
           <a href="<%= url_for(post.path) %>" target="<%- theme.index.post_url_target %>">
-            <h1><%= post.title %></h1>
+            <h3><%= post.title %></h3>
           </a>
           <% if (theme.index.enable_sticky && post.sticky > 0) { %>
             <i class="fas fa-thumbtack"></i>

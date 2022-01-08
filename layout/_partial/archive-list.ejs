@@ -1,5 +1,5 @@
 <ul class="list-group">
-  <h2><%= params.postTotal || 0 %> Posts</h2>
+  <h2 class="list-header"><%= params.postTotal || 0 %> Posts</h2>
   <% let currDate; %> 
   <% page.posts.each(function(post) { %>
     <% if (currDate !== date(post.date, 'YYYY')) { %>

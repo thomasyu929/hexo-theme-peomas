@@ -3,7 +3,7 @@
   .index-post-wrapper {
     display: flex;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.75rem 0 !important;
 
     .post-image {
       img {
@@ -72,8 +72,12 @@
 }
 
 @media (max-width: 767px)  {
-  .post-intro {
-    padding-top: 1.25rem;
+  .index-post-wrapper {
+    padding: 1.25rem 0 !important;  
+  }
+
+  .post-image {
+    padding-bottom: 1.25rem;
   }
 
   time {

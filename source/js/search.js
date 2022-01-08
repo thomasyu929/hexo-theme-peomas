@@ -4,6 +4,10 @@ function listenSearchInput(url, searchId, resultId) {
   const searchEl = $(searchId);
   const resultEl = $(resultId);
 
+  $('#searchModal').on('shown.bs.modal', function () {
+    searchEl.focus();
+  })
+
   $.ajax({
     url,
     dataType: "xml",
@@ -56,9 +60,9 @@ function listenSearchInput(url, searchId, resultId) {
               categoryHTML = post.categories.reduce((html, category) => html + `<div class="tag">${ category }</div>`, '');
 
               resultHTML += `
-                <li class="list-group-item py-1">
+                <li class="list-group-item py-2">
                   <a href="${ post.url }">
-                    <h3 class="title">${ post.title }</h3>
+                    <span class="title">${ post.title }</span>
                   </a>
                   <div class="content">${ m_content }</div>
                   <div class="d-flex py-2">${ categoryHTML }${ tagHTML }</div>

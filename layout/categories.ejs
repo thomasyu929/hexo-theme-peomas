@@ -3,16 +3,19 @@
   page.title = 'Category'
 %>
 
-<h2><%= site.categories.length || 0 %> Categories </h2>
-<ul class="list-group category-wrapper">
-  <% site.categories.each(function(category) { %>
-    <li class="list-group-item">
-      <a class="category" href="<%= url_for(category.path) %>">
-        <%= category.name %>
-      </a>
-      <a class="category-count" href="<%= url_for(category.path) %>">
-        <%= category.posts.length || 0 %>
-      </a>
-    </li>
-  <% }) %> 
-</ul>
+<div class="categories-wrapper">
+  <h2 class="list-header"><%= site.categories.length || 0 %> Categories </h2>
+  <ul class="list-group category-wrapper">
+    <% site.categories.each(function(category) { %>
+      <li class="list-group-item">
+        <a class="category" href="<%= url_for(category.path) %>">
+          <%= category.name %>
+        </a>
+        <a class="category-count" href="<%= url_for(category.path) %>">
+          <%= category.posts.length || 0 %>
+        </a>
+      </li>
+    <% }) %> 
+  </ul>
+</div>
+

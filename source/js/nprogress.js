@@ -17,6 +17,7 @@ function getScrollPercentage() {
   const scrollTop = document.documentElement.scrollTop;
   const scrollHeight = document.documentElement.scrollHeight;
   const clientHeight = document.documentElement.clientHeight;
+  const percentage = scrollTop / (scrollHeight - clientHeight);
 
-  return scrollHeight ? scrollTop / (scrollHeight - clientHeight) - 0.0001 : 0;
+  return scrollHeight ? (percentage >= 1 ? 0.999 : percentage) : 0;
 }
